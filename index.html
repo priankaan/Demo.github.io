@@ -13,213 +13,199 @@
   <link rel="alternate" href="index.xml" type="application/rss+xml" title="Speech Research">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   <title>VALL-E-Universal</title>
+  <style>
+    table {
+      width: 100%;
+    }
+
+    table td:nth-child(1) {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
+  <div style="background-color: aquamarine;background-image:linear-gradient(120deg, #155799, #159957);
+    height: 30vh;position: sticky;display: flex; justify-content: center; align-items: center;">
+    <h1 class="entry-title" itemprop="headline"
+      style="text-align: center;font-weight: bold; font-size: 6.25rem;color: white;">
+      Universal Low-Resource
+      Speech Synthesis
+      Via Phoneme Fusion
+      Coordinating Low-Rank Decomposition</h1>
+  </div </body>
 
-  <div class="container">
-    <header role="banner">
-    </header>
-    <main role="main">
-      <article itemscope itemtype="https://schema.org/BlogPosting">
-        <h1 class="entry-title" itemprop="headline" style="text-align: center;font-weight: bold">Universal Low-Resource
-          Speech Synthesis
-          Via Phoneme Fusion
-          Coordinating Low-Rank Decomposition</h1>
-        <section itemprop="entry-text">
-          <br>
-          <h2 id="authors">Authors</h2>
-          <ul>
-            <li>Yanliang Li(Kunming University of Science and Technology)</li>
-            <li>Zhengtao Yu(Kunming University of Science and Technology)</li>
-            <li>Linqin Wang(Kunming University of Science and Technology)</li>
-            <li>Shengxiang Gao(Kunming University of Science and Technology)</li>
-            <li>Ling Dong(Kunming University of Science and Technology)</li>
-            <li>Wenjun Wang(Kunming University of Science and Technology)</li>
-          </ul>
-          <h2 id="abstract">Abstract</h2>
-          <p style="text-align: justify;"> Recent advancements in end-to-end text-to-speech models have made significant
-            progress. However, these
-            approaches based on high-resource languages, are inapplicable for low-resource languages, and existing
-            low-resource speech synthesis methods are typically specific to single languages. Consequently, the pursuit
-            of a universal methodology for low-resource speech synthesis emerges as a critical problem that requires
-            immediate attention. Unlike previous works, we propose a novel and universal approach for multiple
-            low-resource languages by leveraging phoneme fusion coordinating low-rank decomposition in a pre-trained
-            multilingual model. Specifically, by establishing a multilingual phoneme dictionary through phoneme fusion
-            and applying parameter freezing and matrix decomposition techniques for fine-tuning, the proposed method was
-            extensively evaluated across four different languages, each utilizing approximately 3 hours of speech data.
-            The experimental results demonstrate that the quality of the synthesized speech surpasses current mainstream
-            methods for low-resource speech synthesis, achieving outcomes comparable to those trained with tens of hours
-            of data. Audio samples are available at
-            <span style="color: blue;">https://priankaan.github.io/Demo.github.io</span>
-          </p>
-          <h2 id="comparison-with-other-models">Audio samples from four languages of Thai,Lao,Vietnamese,Kurdish</h2>
+  <body>
+    <div class="container">
+      <header role="banner">
+      </header>
+      <main role="main">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+          <h1 class="entry-title" itemprop="headline"
+            style="text-align: left; font-size: 3.25rem;color: rgb(21, 153, 87);">
+            Universal Low-Resource
+            Speech Synthesis
+            Via Phoneme Fusion
+            Coordinating Low-Rank Decomposition</h1>
+          <section itemprop="entry-text">
+            <br>
+            <img src="./modelimage/model.png" alt="model.png">
+            <h2 id="abstract" style="color: rgb(21, 153, 87);">Abstract</h2>
+            <p style="text-align: justify;"> Recent advancements in end-to-end text-to-speech models have made
+              significant
+              progress. However, these
+              approaches based on high-resource languages, are inapplicable for low-resource languages, and existing
+              low-resource speech synthesis methods are typically specific to single languages. Consequently, the
+              pursuit
+              of a universal methodology for low-resource speech synthesis emerges as a critical problem that requires
+              immediate attention. Unlike previous works, we propose a novel and universal approach for multiple
+              low-resource languages by leveraging phoneme fusion coordinating low-rank decomposition in a pre-trained
+              multilingual model. Specifically, by establishing a multilingual phoneme dictionary through phoneme fusion
+              and applying parameter freezing and matrix decomposition techniques for fine-tuning, the proposed method
+              was
+              extensively evaluated across four different languages, each utilizing approximately 3 hours of speech
+              data.
+              The experimental results demonstrate that the quality of the synthesized speech surpasses current
+              mainstream
+              methods for low-resource speech synthesis, achieving outcomes comparable to those trained with tens of
+              hours
+              of data. Audio samples are available at
+              <span style="color: blue;">https://priankaan.github.io/Demo.github.io</span>
+            </p>
+            <h2 id="abstract" style="color: rgb(21, 153, 87);">Comparative audio samples of different systems from four
+              languages: Thai, Lao, Vietnamese (Vi), and Kurdish (Ku)</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align: center">languages</th>
+                  <th style="text-align: center;">Text</th>
+                  <th style="text-align: center">VALL-E-U</th>
+                  <th style="text-align: center">Baseline</th>
+                  <th style="text-align: center">FastSpeech2</th>
+                </tr>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">Ku</td>
+                  <td style="text-align: center;">ە لەسایەی زوڵفی تۆوە شەو درێژە</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/ckb-2.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/ckb-2_valle.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/ckb_2_fastspeech2.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Ku</td>
+                  <td style="text-align: center;">مرۆڤی پێگەیشتوو ٣٢ ددانی لە دەمە</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/ckb-3.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/ckb-3_valle.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/ckb_3_fastspeech2.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Lao</td>
+                  <td style="text-align: center;">ຂໍຂອບໃຈທີ່ໄດ້ພົບເຈົ້າ</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/lao_3.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/lao-3.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/lao_3.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Lao</td>
+                  <td style="text-align: center;">ສະບາຍດີ ຂ້ອຍຍິນດີທີ່ໄດ້ພົບເຈົ້າ</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/lao_4.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/lao-4.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/lao_4.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Thai</td>
+                  <td style="text-align: center;">ฟ้ารักพ่อ ฟ้าจะพาพ่อไปทุกที่</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/thai_1.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/thai-1.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/thai-1.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Thai</td>
+                  <td style="text-align: center;">สวัสดีครับ</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/thai.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/thai.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/thai.wav" autoplay />
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Vi</td>
+                  <td style="text-align: center;">Xin chào! Rất vui được gặp bạn.</td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-u/vi.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/vall-e-x/vi.wav" autoplay />
+                    </audio></td>
+                  <td style="text-align: center"><audio controls="controls">
+                      <source src="audio/fastspeech2/vi.wav" autoplay />
+                    </audio></td>
+                </tr>
+              </tbody>
+            </table>
 
+            </p>
 
-          <p style="font-weight: bold;"><em>VALLE-U Audio Samples</em></p>
-          <table>
-            <thead>
-              <tr>
-                <th style="text-align: center">Kurdish 1</th>
-                <th style="text-align: center">Kurdish 1</th>
-                <th style="text-align: center">Lao 2</th>
-                <th style="text-align: center">Lao 2</th>
-              </tr>
-              <tr>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/ckb_1.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/ckb_2.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/lao_3.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/lao_4.wav" autoplay />
-                  </audio></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th style="text-align: center">Thai 1</th>
-                <th style="text-align: center">Thai 2</th>
-                <th style="text-align: center">Vietnamese 1</th>
-                <!-- <th style="text-align: center">Vietnamese 2</th> -->
-              </tr>
-              <tr>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/thai_1.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/thai_2.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/vi_1.wav" autoplay />
-                  </audio></td>
-                <!-- <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-u/vi_2.wav" autoplay />
-                  </audio></td> -->
-              </tr>
-            </tbody>
-          </table>
-
-
-
-          <p style="font-weight: bold;"><em>VALLE-X Audio Samples</em></p>
-          <table>
-            <thead>
-              <tr>
-                <th style="text-align: center">Kurdish 1</th>
-                <th style="text-align: center">Kurdish 2</th>
-                <th style="text-align: center">Lao 1</th>
-                <th style="text-align: center">Lao 2</th>
-              </tr>
-              <tr>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/ckb-2.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/ckb-3.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/lao-3.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/lao-4.wav" autoplay />
-                  </audio></td>
-              </tr>
-
-            </thead>
-            <tbody>
-              <tr>
-                <th style="text-align: center">Thai 1</th>
-                <th style="text-align: center">Thai 2</th>
-                <th style="text-align: center">Vietnamese</th>
-              </tr>
-              <tr>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/thai-1.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/thai.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/vall-e-x/vi_3.wav" autoplay />
-                  </audio></td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="font-weight: bold;"><em>Fastspeech2 Audio Samples</em></p>
-          <table>
-            <thead>
-              <tr>
-                <th style="text-align: center">Kurdish 1</th>
-                <th style="text-align: center">Kurdish 2</th>
-                <th style="text-align: center">Lao 1</th>
-                <th style="text-align: center">Lao 2</th>
-              </tr>
-              <tr>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/fastspeech2/ckb-2.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/fastspeech2/ckb-3.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/fastspeech2/lao_3.wav" autoplay />
-                  </audio></td>
-                <td style="text-align: center"><audio controls="controls">
-                    <source src="audio/fastspeech2/lao_4.wav" autoplay />
-                  </audio></td>
-              <tr>
-            </thead>
-            <tbody>
-              <th style="text-align: center">Thai 1</th>
-              <th style="text-align: center">Thai 2</th>
-              <th style="text-align: center">Vietnamese</th>
-              </tr>
-              <td style="text-align: center"><audio controls="controls">
-                  <source src="audio/fastspeech2/thai-1.wav" autoplay />
-                </audio></td>
-              <td style="text-align: center"><audio controls="controls">
-                  <source src="audio/fastspeech2/thai.wav" autoplay />
-                </audio></td>
-              <td style="text-align: center"><audio controls="controls">
-                  <source src="audio/fastspeech2/vi_3.wav" autoplay />
-                </audio></td>
-              </tr>
-            </tbody>
-          </table>
-
-          </p>
-
-        </section>
-      </article>
-    </main>
+          </section>
+        </article>
+      </main>
 
 
 
 
-  </div>
+    </div>
 
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-139981676-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-139981676-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-
-
-  <script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
          HTML: ["input/TeX","output/HTML-CSS"],
          TeX: {
@@ -239,7 +225,7 @@
      });
  </script>
 
-  <script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
      MathJax.Hub.Config({
        tex2jax: {
          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
@@ -247,13 +233,13 @@
      });
  </script>
 
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
 
 
 
 
-</body>
+  </body>
 
 </html>
